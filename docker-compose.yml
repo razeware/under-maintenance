@@ -1,0 +1,9 @@
+version: '2'
+services:
+  under-maintenance:
+    image: razeware/nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./etc/nginx/sites-enabled:/etc/nginx/sites-enabled:ro
+      - ./public:/var/www/under-maintenance/public:ro
